@@ -19,7 +19,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 
 //form and httpclient
 
-import {Form, FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms'
 import {HttpClientModule} from '@angular/common/http'
 
 
