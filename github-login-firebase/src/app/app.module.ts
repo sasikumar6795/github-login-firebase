@@ -24,7 +24,7 @@ import {HttpClientModule} from '@angular/common/http'
 
 
 //firebase
-import {AngularFireAuth, AngularFireAuthModule} from '@angular/fire/auth'
+import {AngularFireAuthModule} from '@angular/fire/auth'
 import {AngularFireModule} from '@angular/fire'
 
 //toastr
