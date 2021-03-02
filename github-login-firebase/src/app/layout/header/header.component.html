@@ -1,16 +1,29 @@
 <nav class="navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" [routerLink]=" ['/'] ">
-        <img src="../../../assets/img.png" width="30" height="30" alt=""> LCO Git Hub
-    </a>
-    <div class="navbar-collapse">
-        <div class="navbar-nav ml-auto">
-            <div *ngIf="email" class="navbar-text float-left">
-                {{email}}
-            </div>
-            <a class="nav-item nav-link" [routerLink]="['/']">Home</a>
-            <a *ngIf="!email" routerLinkAcitve="active" class="nav-item nav-link" [routerLink]="['/signIn']">signIn</a>
-            <a *ngIf="!email" routerLinkAcitve="active" class="nav-item nav-link" [routerLink]="['/signUp']">signUp</a>
-            <a *ngIf="email" class="nav-item nav-link" (click)="signOut()">logOut</a>
-        </div>
+  <a class="navbar-brand" [routerLink]="['/']">
+    <img src="../../../assets/img.png" width="30" height="30" alt="" /> LCO Git
+    Hub
+  </a>
+  <div class="navbar-collapse">
+    <div class="navbar-nav ml-auto">
+      <div *ngIf="email" class="navbar-text float-left">
+        {{ email }}
+      </div>
+      <a class="nav-item nav-link" [routerLink]="['/']">Home</a>
+      <a
+        *ngIf="!email"
+        routerLinkAcitve="active"
+        class="nav-item nav-link"
+        [routerLink]="['/signIn']"
+        >signIn</a
+      >
+      <a
+        *ngIf="!email"
+        routerLinkAcitve="active"
+        class="nav-item nav-link"
+        [routerLink]="['/signUp']"
+        >signUp</a
+      >
+      <a *ngIf="email" class="nav-item nav-link" (click)="signOut()">logOut</a>
     </div>
+  </div>
 </nav>
