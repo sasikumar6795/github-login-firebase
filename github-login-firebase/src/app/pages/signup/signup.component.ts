@@ -16,9 +16,9 @@ export class SignupComponent implements OnInit {
     private toastr: ToastrService
   ) {}
 
-  onSubmit(formV: NgForm) {
+  onSubmit(f: NgForm) {
 
-    const {email, password} = formV.form.value;
+    const {email, password} = f.form.value;
 
     this.authService.signUp(email,password)
     .then(
