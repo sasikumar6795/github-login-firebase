@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {  NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { from } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -17,10 +16,26 @@ export class SignupComponent implements OnInit {
     private toastr: ToastrService
   ) {}
 
+  onSubmit(formV: NgForm) {
 
-  onSubmit(f : NgForm)
-  {
-    console.log(f.value);
+    const {email, password} = formV.form.value;
+
+    this.authService.signUp(email,password)
+    .then(
+      (res)=>{
+        this.router.navigateByUrl('/');
+        this.toastr.success("signup success");
+      }
+    )
+    .catch(
+      (err)=>{
+        console.log(err.message);
+        this.toastr.error('Signup failed');
+      }
+    )
+
+    
+
   }
 
   ngOnInit(): void {}
