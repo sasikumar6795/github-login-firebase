@@ -31,7 +31,7 @@ const routes: Routes = [
     data: { authGuardPipe: redirectUnauthorizedToLogin },
   },
   {
-    path: '**',
+    path: "**",
     component: PagenotfoundComponent,
   },
 ];
