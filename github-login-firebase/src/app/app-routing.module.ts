@@ -11,17 +11,17 @@ import {
   redirectLoggedInTo,
 } from '@angular/fire/auth-guard';
 
-const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['signin']);
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['signIn']);
 const redirectLoggedInToHome = () => redirectLoggedInTo(['']);
 const routes: Routes = [
   {
-    path: 'signin',
+    path: 'signIn',
     component: SigninComponent,
     canActivate: [AngularFireAuthGuard],
     data: { authGuardPipe: redirectLoggedInToHome },
   },
   {
-    path: 'signup',
+    path: 'signUp',
     component: SignupComponent,
   },
   {
